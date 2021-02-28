@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&display=swap');
+a, button
+{
+    transition: all .3s ease-in-out;
+}
+*
+{
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 10px;
+}
+.container
+{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px;
+}
+body
+{
+    font: 400 1.4em 'Open Sans', sans-serif;
+    background-color: #eee;
+
+    --additional-text: #6E798C;
+    --main-text: #007AE9;
+    --body-text: #374A59;
+}
+.cards
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card
+{   
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card__img
+{
+    position: relative;
+    padding-top: 53%; /*считаем от ширины для адаптивности*/
+    overflow: hidden;
+}
+.card__img img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.card__content
+{
+    padding: 1.7em 1.9em;
+}
+.card__head, .card__foot
+{
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85em;
+}
+.card__head
+{
+    color: var(--additional-text);
+    margin-bottom: 1em;
+}
+.card__category
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: inherit;
+}
+.card__category:hover,
+.card__category:focus,
+.card__category:active
+{
+    color: var(--main-text);
+}
+.card__title
+{
+    font: 1.6em 'DM Serif Display', serif;
+    margin: 0.5em 0 0.25em;
+    line-height: 1.25;
+    max-height: 2.5em;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--body-text);
+}
+a.card__title:hover,
+a.card__title:focus,
+a.card__title:active
+{
+    color: var(--main-text);
+
+}
+.card__text
+{
+    color: var(--body-text);
+    line-height: 1.5;
+    height: 5.8em;
+    overflow: hidden;
+}
+.card__foot
+{
+    color: var(--main-text);
+    margin-top: 15px;
+    align-items: center;
+    font-weight: 600;
+    
+}
+.card__read-more
+{
+    text-decoration: none;
+    color: inherit;
+}
+.card__read-more:hover,
+.card__read-more:focus,
+.card__read-more:active
+{
+    color: var(--additional-text);
+}
+.author
+{
+    color: inherit;
+    text-decoration: none;
+    
+}
+.author__img
+{
+    --size: 32px;
+    position: relative;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-position:  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.author__name
+{
+    vertical-align: middle;
+
+}
+.author:hover,
+.author:focus,
+.author:active
+{
+    color: var(--additional-text);
+}
+
+.card--lg
+{
+    --columns: 1;
+    flex-direction: row;
+    font-size: 1.8rem;
+}
+.card--lg .card__img
+{
+    padding-top: 0;
+    padding-left: 40%;
+}
+.card--lg .card__title
+{
+    font-size: 2.2em;
+}
+.card--lg .author__img
+{
+    --size: 44px;
+}
+.card--sm
+{
+    --columns: 3;
+    flex-direction: row;
+}
+.card--sm .card__img
+{
+    padding-top: 0;
+    padding-left: 35%;
+}
+.card--lg .card__img img, .card--sm .card__img img
+{
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
